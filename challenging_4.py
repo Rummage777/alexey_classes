@@ -16,30 +16,30 @@ Then, the output should be:
 input_data = '34,67,55,33,12,98'
 
 
-def list_converter():
-    data_list = input_data.split(',')
+def list_converter(data):
+    data_list = data.split(',')
     return data_list
 
 
-def tuple_converter():
-    data_tuple = tuple(list_converter())
+def tuple_converter(data):
+    data_tuple = tuple(list_converter(data))
     return data_tuple
 
 
-print(list_converter())
-print(tuple_converter())
+print(list_converter(input_data))
+print(tuple_converter(input_data))
 
 
 def test_result():
     passed = True
-    result = list_converter()
+    result = list_converter(input_data)
     if len(result) != 6:
         passed = False
         print('Test #1 failed')
     if result != ['34', '67', '55', '33', '12', '98']:
         passed = False
         print('Test #2 failed')
-    number = tuple_converter()
+    number = tuple_converter(input_data)
     if len(number) != 6:
         passed = False
         print('Test #3 failed')
@@ -51,3 +51,4 @@ def test_result():
 
 
 test_result()
+
