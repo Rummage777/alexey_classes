@@ -15,7 +15,7 @@ bag,hello,without,world
 
 def alphabetical_sorting(sequence):
     result = sequence.split(',')
-    result.sort(key=None)
+    result.sort()
     print(','.join(result))
 
 

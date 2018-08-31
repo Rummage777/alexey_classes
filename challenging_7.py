@@ -23,7 +23,10 @@ def making_array(data):
         array.append([])
         for j in range(data[1]):
             array[i].append(i * j)
-    print(array)
+    return(array)
 
 
-making_array('3,5')
+print(making_array('3,5'))
+
+# переписать используя распаковку списка в переменные (list unpacking)
+# использовать переменные для задания границ циклов
