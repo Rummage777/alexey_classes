@@ -13,20 +13,19 @@ Suppose the following inputs are given to the program:
 Then, the output of the program should be:
 [[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
 '''
+# Замечания
+# переписать используя распаковку списка в переменные (list unpacking)
+# использовать переменные для задания границ циклов
 
 
 def making_array(data):
     array = []
-    data = data.split(',')
-    data = [int(item) for item in data]
-    for i in range(data[0]):
+    widht, height = list(map(int, data.split(',')))
+    for i in range(widht):
         array.append([])
-        for j in range(data[1]):
+        for j in range(height):
             array[i].append(i * j)
     return(array)
 
 
 print(making_array('3,5'))
-
-# переписать используя распаковку списка в переменные (list unpacking)
-# использовать переменные для задания границ циклов

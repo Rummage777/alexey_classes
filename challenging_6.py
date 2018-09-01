@@ -20,6 +20,10 @@ The output of the program should be:
 18,22,24
 '''
 
+# Замечания!
+# (Плохой вариант) Вынести Q из функции и проверить содержание после выполнения функции добавить 
+# (Хороший вариант) Переписать функцию, чтобы она что то возвращала(return Q)
+
 
 def calculation(input_data):
     Q = []
@@ -28,10 +32,6 @@ def calculation(input_data):
     D = input_data.split(',')
     for number in D:
         Q.append(int(sqrt((2 * C * int(number)) / H)))
-    print(*Q, sep=',')
+    return Q
 
-
-calculation('100,150,180')
-
-# (Плохой вариант) Вынести Q из функции и проверить содержание после выполнения функции добавить 
-# (Хороший вариант) Переписать функцию, чтобы она что то возвращала(return Q)
+print(*calculation('100,150,180'), sep=',')
