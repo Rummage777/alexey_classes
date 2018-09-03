@@ -1,6 +1,7 @@
 # usr/bin/python
 # -*- coding: utf-8 -*-
 
+from __future__ import print_function
 
 '''
 Question:
@@ -12,19 +13,9 @@ The numbers obtained should be printed in a comma-separated sequence on a single
 def analyzing_numbers():
     result = []
     for number in range(2222, 3001):
-        passed = True
         (first, second, third, fourth) = [int(item) for item in str(number)]
-        if first % 2 != 0:
-            passed = False
-        if second % 2 != 0:
-            passed = False
-        if third % 2 != 0:
-            passed = False
-        if fourth % 2 != 0:
-            passed = False
-        if passed:
+        if first % 2 == 0 and second % 2 == 0 and third % 2 == 0 and fourth % 2 == 0:
             result.append(number)
-
     return result
 
 

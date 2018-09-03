@@ -10,6 +10,7 @@ Then, the output should be:
 UPPER CASE 1
 LOWER CASE 9
 '''
+# TODO: переделать в универсальную функцию с передачей метода
 
 
 def count_cases(data):

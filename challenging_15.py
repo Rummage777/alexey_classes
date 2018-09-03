@@ -12,9 +12,8 @@ Then, the output should be:
 
 
 def compute_value(data):
-    result = int(data) + int(str(data) * 2) + int(str(data) * 3) + \
-             int(str(data) * 4)
-    return result
+    '''Argument must be int'''
+    return data + data * 11 + data * 111 + data * 1111
 
 
 print(compute_value(9))

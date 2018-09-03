@@ -12,21 +12,13 @@ DIGITS 3
 '''
 
 
-def calculation_letters(input_data):
-    letters = 0
+def calculate_items(input_data, str_method):
+    counter = 0
     for item in input_data:
-        if item.isalpha():
-            letters += 1
-    return letters
+        if str_method(item):
+            counter += 1
+    return counter
 
 
-def calculation_digits(input_data):
-    digits = 0
-    for item in input_data:
-        if item.isdigit():
-            digits += 1
-    return digits
-
-
-print("LETTERS", calculation_letters('hello world! 123'))
-print("DIGITS", calculation_digits('hello world! 123'))
+print("LETTERS", calculate_items('hello world! 123', str.isalpha))
+print("DIGITS", calculate_items('hello world! 123', str.isdigit))

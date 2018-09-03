@@ -1,6 +1,7 @@
 # !usr/bin/python
 # -*- coding: utf-8 -*-
 
+from __future__ import print_function
 
 '''
 Question:
@@ -19,7 +20,11 @@ ABd1234@1,a F1#,2w3E*,2We3345
 Then, the output of the program should be:
 ABd1234@1
 '''
+# TODO: Убрать passed и использовать contimue
+# Переделать через set
+# Добавить кейсы в тесты, когда все условия правильные, кроме одного 
 
+# Hint: Use function any()
 
 def check_password(data):
     result = []
@@ -44,4 +49,4 @@ def check_password(data):
     return result
 
 
-print(*check_password('ABd1234@1,a F1#,2w3E*,2We3345'))
+print(*check_password('ABd1234@1,a F1#,2w3E*,2We3345, rtTty$'))

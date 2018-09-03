@@ -22,9 +22,10 @@ def making_array(data):
     array = []
     widht, height = list(map(int, data.split(',')))
     for i in range(widht):
-        array.append([])
+        row = []
+        array.append(row)
         for j in range(height):
-            array[i].append(i * j)
+            row.append(i * j)
     return(array)
 
 

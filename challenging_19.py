@@ -18,11 +18,12 @@ Then, the output of the program should be:
 [('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
 '''
 
+# TODO: принимать в качестве второго аргумета название кодлонки, проверить и сортировать по нужной
+
 
 def sort_name_age_score(data):
-    ''' как работает понимаю слабо. Нашла тут: http://www.cyberforum.ru/python/thread2202824.html'''
-    data.sort(key=lambda x: (x[0], x[1], x[2]))
-    return data
+    result = sorted(data)
+    return result
 
 
 print(sort_name_age_score([('Tom',19,80),('John',20,90),('Jony',17,91),('Jony',17,93),('Json',21,85)]))
