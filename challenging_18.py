@@ -51,7 +51,7 @@ def check_password(data):
 print(*check_password('ABd1234@1,a F1#,2w3E*,2We3345, rtTty$'))
 
 
-def test_result(data):
+def test_result():
     print('Tests  started!')
     sequence = data.split(',')
     passed = True
