@@ -18,12 +18,29 @@ Then, the output of the program should be:
 [('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
 '''
 
-# TODO: принимать в качестве второго аргумета название кодлонки, проверить и сортировать по нужной
+# TODO: принимать в качестве второго аргумета название колонки, проверить и сортировать по нужной
+
+input_data = [('Tom',19,80),('John',20,90),('Jony',17,91),('Jony',17,93),('Json',21,85)]
 
 
-def sort_name_age_score(data):
-    result = sorted(data)
-    return result
+class Person(object):
+    def __init__(self, name, age, scores):
+        self.name = name
+        self.age = age
+        self.scores = scores
 
 
-print(sort_name_age_score([('Tom',19,80),('John',20,90),('Jony',17,91),('Jony',17,93),('Json',21,85)]))
+def sorted_by_name(Person):
+    return person.name
+
+
+def sorted_by_age(Person):
+    return person.age
+
+
+def sorted_by_scores(Person):
+    return person.scores
+
+
+a = sorted(input_data, key=sorted_by_name) #, sorted_by_age, sorted_by_scores)
+print(a)
