@@ -24,23 +24,26 @@ input_data = [('Tom',19,80),('John',20,90),('Jony',17,91),('Jony',17,93),('Json'
 
 
 class Person(object):
+
     def __init__(self, name, age, scores):
         self.name = name
         self.age = age
         self.scores = scores
 
-
-def sorted_by_name(Person):
-    return person.name
-
-
-def sorted_by_age(Person):
-    return person.age
+    def __repr__(self):
+        return '{} {} {}'.format(self.name, self.age, self.scores)
 
 
-def sorted_by_scores(Person):
-    return person.scores
+def multiple_sorting(person):
+    return person.name, person.age, person.scores
 
 
-a = sorted(input_data, key=sorted_by_name) #, sorted_by_age, sorted_by_scores)
+data = []
+for item in input_data:
+    data.append(Person(item[0], item[1], item[2]))
+print(data)
+
+
+a = sorted(data, key=(multiple_sorting))
+
 print(a)

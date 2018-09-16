@@ -8,13 +8,18 @@ Define a class with a generator which can iterate the numbers, which are divisib
 '''
 
 
-def iter_numbers(n):
-    result = []
-    for item in range(n):
-        if item % 7 == 0 and item != 0:
-            result.append(str(item))
-    print(','.join(result))
-    return result
+class GenerateNumbers(object):
+
+    def __init__(self):
+        pass
+
+    def iter_numbers(n):
+        result = []
+        for item in range(n):
+            if item % 7 == 0 and item != 0:
+                result.append(str(item))
+        print(', '.join(result))
+        return result
 
 
-iter_numbers(50)
+a = GenerateNumbers.iter_numbers(250)
