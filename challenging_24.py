@@ -13,7 +13,7 @@ def my_func():
     pass
 
 
-print(abs.__doc__)
-print(int.__doc__)
-print(input.__doc__)
-print(my_func.__doc__)
+print(help(abs))
+print(help(int))
+print(help(input))
+print(help(my_func.__doc__))

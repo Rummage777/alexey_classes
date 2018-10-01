@@ -7,15 +7,13 @@ Define a function that can accept two strings as input and print the string with
 
 
 def compare_strings(string1, string2):
-    a = []
+
     if len(string1) > len(string2):
         return string1
     elif len(string1) == len(string2):
-        a.append(string1)
-        a.append(string2)
-        return a
+        return string1 + '\n' + string2
     else:
         return string2
 
 
-print(compare_strings('Hello!', 'Dolly!!!'))
+print(compare_strings('Hello', 'Dolly'))

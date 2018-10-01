@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 from math import sqrt
+import operator
+
 
 '''
 A robot moves in a plane starting from the original point (0,0).
@@ -18,6 +20,10 @@ then, the output of the program should be: 2
 '''
 
 commands = {'UP': 5, 'DOWN': 3, 'LEFT': 3, 'RIGHT': 2}
+sorted_commands = sorted(commands.items(), key=operator.itemgetter(0))
+print(sorted_commands)
+
+# TODO: переделать на метод item так  сразу получаю пару в цикле. Использовать сортированный словарь или список значений)
 
 
 def calculate_distance(data):

@@ -3,7 +3,7 @@
 
 
 '''
-Define a class, which have a class parameter and have a same instance parameter.
+Define a class, which has a class parameter and have a same instance parameter.
 
 Hints:
 Define a instance parameter, need add it in __init__ method
