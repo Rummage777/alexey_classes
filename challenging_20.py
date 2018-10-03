@@ -8,34 +8,26 @@ Question:
 Define a class with a generator which can iterate the numbers, which are divisible by 7, between a given range 0 and n.
 '''
 
-# TODO: переделать цикл с генератором
+# TODO: переделать цикл с генератором. Переделать еще раз
 
 
 n = random.randint(250, 500)
 result = []
 
 
-class GenerateNumbers(object):
+class GenerateNumbers:
 
-    def __init__(self):
-        pass
+    def __init__(self, n):
+        self.n = n
 
-    def check_numbers(number):
-        if number % 7 == 0:
-                return True
-        else:
-            return False
+    def iter_numbers(self, n):
+        for item in range(1, n+1):
+            if item % 7 == 0:
+                yield item
 
-    def iter_numbers(max):
-        number = 0
-        while number < max:
-            number += 1
-            if GenerateNumbers.check_numbers(number):
-                yield number
+    def __iter__(self):
+        return self.iter_numbers(self.n)
 
 
-divisible_by_7 = GenerateNumbers.iter_numbers(n)
-
-for item in divisible_by_7:
-    result.append(item)
-print(result)
+for item in GenerateNumbers(n):
+    print(item, end=" ")
