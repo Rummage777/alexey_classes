@@ -7,11 +7,10 @@ Define a function which can print a dictionary where the keys are numbers betwee
 '''
 numbers = 3
 
+#  TODO: переписать генератор словарей
 
 def create_dict(n):
-    new_dict = {}
-    for item in range(1, n+1):
-        new_dict[item] = item ** 2
+    new_dict = {item:item**2 for item in range(1, n+1)}
     return new_dict
 
 
