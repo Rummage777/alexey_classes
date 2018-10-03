@@ -25,5 +25,5 @@ def calculate_words(input_data):
 
 result = calculate_words(input_data)
 print(type(result))
-for item in sorted(list(result)):
+for item in sorted(result.keys()):
     print('{}:{}'.format(item, result[item]))
