@@ -23,11 +23,8 @@ commands = {'UP': 5, 'DOWN': 3, 'LEFT': 3, 'RIGHT': 2}
 sorted_commands = sorted(commands.items(), key=operator.itemgetter(0))
 print(sorted_commands)
 
-# TODO: переделать на метод item так  сразу получаю пару в цикле. Использовать сортированный словарь или список значений)
-
 
 def calculate_distance(data):
-    distance = 0
     location = [0, 0]
     for item in data:
         if item == 'UP':
