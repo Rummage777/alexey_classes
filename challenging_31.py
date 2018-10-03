@@ -13,7 +13,7 @@ lenght = random.randint(5, 10)
 source_data = random.sample(range(50000), lenght)
 
 
-def check_even_and_odds(data):
+def is_even(data):
     if data % 2 == 0:
         return True
     else:
@@ -22,8 +22,7 @@ def check_even_and_odds(data):
 
 def try_numbers(sequence):
     for item in sequence:
-        result = check_even_and_odds(item)
-        if result:
+        if is_even(item):
             print("Number {} is even".format(item))
         else:
             print("Number {} is odd".format(item))
