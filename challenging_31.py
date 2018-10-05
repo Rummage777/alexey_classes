@@ -14,10 +14,7 @@ source_data = random.sample(range(50000), lenght)
 
 
 def is_even(data):
-    if data % 2 == 0:
-        return True
-    else:
-        return False
+    return data % 2 == 0
 
 
 def try_numbers(sequence):
